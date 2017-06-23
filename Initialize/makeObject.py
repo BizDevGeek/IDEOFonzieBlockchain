@@ -8,7 +8,7 @@ import requests
 import json
 
 CarData = {"datastoreId":1735,
-           "object_type"
+           "object_type":"car",
            "VIN":"123ABC",
            "make":"Ford",
            "model":"Mustang",
@@ -25,6 +25,7 @@ print(response)
 print(response.json())
 
 PartData = {"datastoreId":1735,
+            "object_type":"part",
            "PID":829,
            "description":"Oxygen sensor",
            "manufacturer":"Motorcraft"}
@@ -38,6 +39,7 @@ print(response)
 print(response.json())
 
 PartData = {"datastoreId":1735,
+            "object_type":"part",
            "PID":829,
            "description":"brake pad",
            "manufacturer":"Motorcraft"}
@@ -51,6 +53,7 @@ print(response)
 print(response.json())
 
 PartData = {"datastoreId":1735,
+            "object_type":"part",
            "PID":829,
            "description":"rotor",
            "manufacturer":"Motorcraft"}
@@ -64,6 +67,7 @@ print(response)
 print(response.json())
 
 MechanicData = {"datastoreId":1735,
+            "object_type":"mechanic",
                 "MID":34,
                 "address":"1 Main St, Boston, MA 02149",
                 "credentials":"ASE Certified",
