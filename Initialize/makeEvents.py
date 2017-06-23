@@ -8,6 +8,7 @@ import json
 EventData = {"datastoreId":1735,
            "object_type":"event_swap",
            "MID":34,
+             "VIN":"11234WG",
            "part_old":256,
             "part_new":829}
 data_json = json.dumps(EventData)
@@ -22,6 +23,7 @@ print(response.json())
 
 EventData = {"datastoreId":1735,
            "object_type":"event_swap",
+             "VIN":"11234WG",
            "MID":34,
            "part_old":829,
             "part_new":810}
@@ -36,6 +38,7 @@ print(response.json())
 
 EventData = {"datastoreId":1735,
            "object_type":"event_swap",
+             "VIN":"11234WG",
            "MID":34,
            "part_old":153,
             "part_new":102}
