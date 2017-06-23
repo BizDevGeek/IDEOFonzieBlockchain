@@ -1,7 +1,9 @@
 import requests
 import json
 
-url="https://api.tierion.com/v1/records/WYhJtu2_uEOwF_pVbg0pjA"
+url_base="https://api.tierion.com/v1/records/"
+objectID="WYhJtu2_uEOwF_pVbg0pjA"
+url = url_base + objectID
 headers = {'Content-type': 'application/json',
            "X-Username":"jozefnagyjr@gmail.com",
            "X-Api-Key":"ZquJZ80IrE/gSq+1V79SImwIyvMtYHY4Z+MzNNuou8o="}
