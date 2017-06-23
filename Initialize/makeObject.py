@@ -66,6 +66,35 @@ response = requests.post(url, data=data_json, headers=headers)
 print(response)
 print(response.json())
 
+PartData = {"datastoreId":1735,
+            "object_type":"part",
+           "PID":322,
+           "description":"air filter",
+           "manufacturer":"Autozone"}
+data_json = json.dumps(CarData)
+url="https://api.tierion.com/v1/records"
+headers = {'Content-type': 'application/json',
+           "X-Username":"jozefnagyjr@gmail.com",
+           "X-Api-Key":"ZquJZ80IrE/gSq+1V79SImwIyvMtYHY4Z+MzNNuou8o="}
+response = requests.post(url, data=data_json, headers=headers)
+print(response)
+print(response.json())
+
+PartData = {"datastoreId":1735,
+            "object_type":"part",
+           "PID":987,
+           "description":"steering wheel",
+           "manufacturer":"Autozone"}
+data_json = json.dumps(CarData)
+url="https://api.tierion.com/v1/records"
+headers = {'Content-type': 'application/json',
+           "X-Username":"jozefnagyjr@gmail.com",
+           "X-Api-Key":"ZquJZ80IrE/gSq+1V79SImwIyvMtYHY4Z+MzNNuou8o="}
+response = requests.post(url, data=data_json, headers=headers)
+print(response)
+print(response.json())
+
+
 MechanicData = {"datastoreId":1735,
             "object_type":"mechanic",
                 "MID":34,
@@ -81,4 +110,18 @@ response = requests.post(url, data=data_json, headers=headers)
 print(response)
 print(response.json())
 
+#Car Owner
+PersonData = {"datastoreId":1735,
+            "object_type":"car_owner",
+                "OID":163,
+                "name":"Marco Polo",
+                "address":"67 Pine St, Boston, MA 02149"}
+data_json = json.dumps(MechanicData)
+url="https://api.tierion.com/v1/records"
+headers = {'Content-type': 'application/json',
+           "X-Username":"jozefnagyjr@gmail.com",
+           "X-Api-Key":"ZquJZ80IrE/gSq+1V79SImwIyvMtYHY4Z+MzNNuou8o="}
+response = requests.post(url, data=data_json, headers=headers)
+print(response)
+print(response.json())
 
