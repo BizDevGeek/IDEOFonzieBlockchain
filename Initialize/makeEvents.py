@@ -51,3 +51,20 @@ response = requests.post(url, data=data_json, headers=headers)
 print(response)
 print(response.json())
 
+#Transfer Ownership
+EventData = {"datastoreId":1735,
+           "object_type":"event_title",
+             "VIN":"11234WG",
+           "owner_old":256,
+            "owner_new":829}
+data_json = json.dumps(EventData)
+url="https://api.tierion.com/v1/records"
+headers = {'Content-type': 'application/json',
+           "X-Username":"jozefnagyjr@gmail.com",
+           "X-Api-Key":"ZquJZ80IrE/gSq+1V79SImwIyvMtYHY4Z+MzNNuou8o="}
+response = requests.post(url, data=data_json, headers=headers)
+print(response)
+print(response.json())
+
+
+
