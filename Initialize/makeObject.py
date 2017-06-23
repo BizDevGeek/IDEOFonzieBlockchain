@@ -40,7 +40,7 @@ print(response.json())
 
 PartData = {"datastoreId":1735,
             "object_type":"part",
-           "PID":829,
+           "PID":153,
            "description":"brake pad",
            "manufacturer":"Motorcraft"}
 data_json = json.dumps(CarData)
@@ -54,7 +54,7 @@ print(response.json())
 
 PartData = {"datastoreId":1735,
             "object_type":"part",
-           "PID":829,
+           "PID":477,
            "description":"rotor",
            "manufacturer":"Motorcraft"}
 data_json = json.dumps(CarData)
