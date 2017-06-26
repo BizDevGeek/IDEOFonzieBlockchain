@@ -3,21 +3,13 @@
 #Based on code from John Oudsteyn
 
 
-#!/usr/bin/env python2
-# pip install pyserial
 import requests
 import serial
 import json
 
-baseUrl = "https://api.tierion.com/v1/records"
-with serial.Serial('/dev/tty.usbmodem14121', 9600) as ser:
-    while True:
-        line = ser.readline()
-        swapPart( line.strip() )
-
-def swapPart( rfid ):
+def swapPart(rfid):
     print(rfid)
-
+    
 
 def writeRecord(dataPayload):
     setattr(dataPayload, "datastoreId", 1735)
@@ -30,3 +22,10 @@ def writeRecord(dataPayload):
     print(response)
     print(response.json())
 
+baseUrl = "https://api.tierion.com/v1/records"
+with serial.Serial('\\.\COM3', 9600) as ser:
+    while True:
+        line = ser.readline()
+        swapPart(line.strip())
+        #print(line.strip())
+        
