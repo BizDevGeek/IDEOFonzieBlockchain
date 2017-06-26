@@ -14,24 +14,21 @@ def swapPart(rfid):
     
 
 def writeRecord(dataPayload):
-    #response = requests.post(baseUrl, data=json.dumps(dataPayload), headers=headers)
-    #print(response)
-    #print(response.json())
-
     url = "https://ideo-autonet-node.run.aws-usw02-pr.ice.predix.io/api/vehicle/equipment/change"
-    
+   
     headers = {
     'content-type': "application/json",
     'x-api-key': "SsjA0MdYOGag8xSmLomllZ0wk2zp2s1GrXrBxhWuwt",
     'cache-control': "no-cache"
     }
 
+    dataPayload = {"change":{"tag":dataPayload}}
     response = requests.request("POST", url, data=json.dumps(dataPayload), headers=headers)
     print(response)
     print(response.text)
 
 
-baseUrl = "https://api.tierion.com/v1/records"
+#MAIN 
 with serial.Serial('\\.\COM3', 9600) as ser:
     while True:
         line = ser.readline()
